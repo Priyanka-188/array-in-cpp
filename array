@@ -1,0 +1,39 @@
+#include<iostream>
+using namespace std;
+class shop
+{
+private:
+    int itemId[100];
+    int itemPrice[100];
+    int counter;
+public:
+    void initcounter()
+    {
+        counter=0;
+    }
+    void setdata();
+    void getdata();
+};
+void shop::setdata()
+{
+    cout<<"Enter item id:"<<endl;
+    cin>>itemId[counter];
+    cout<<"Enter  item price:"<<endl;
+    cin>>itemPrice[counter];
+    counter++;
+}
+void shop::getdata()
+{
+    for(int i=0;i<counter;i++)
+    cout<<"The price of item with id "<<itemId[i]<<" is "<<itemPrice[i]<<" "<<endl;
+}
+int main()
+{
+    shop dukan;
+    dukan.initcounter();
+    dukan.setdata();
+    dukan.setdata();
+    dukan.getdata();
+    return 0;
+
+}
